@@ -1,4 +1,4 @@
-# Physics-Enhanced Wastewater Pump Station Simulator
+# Modeling and Physics-Enhanced Fault Detection in Wastewater Pump Stations
 
 This repository contains the code accompanying the paper
 "Modeling and Physics-Enhanced Fault Detection in Wastewater Pump Stations".
