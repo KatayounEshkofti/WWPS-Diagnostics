@@ -1,0 +1,49 @@
+=== Config ===
+data_xlsx: C:\Users\eshkofti\Downloads\diagnostic-statistical\pump_system_faultsimualtion.xlsx
+cycles_xlsx: C:\Users\eshkofti\Downloads\diagnostic-statistical\Cycle counter\Cycles-Labels.xlsx
+out_dir: C:\Users\eshkofti\Downloads\diagnostic-statistical\test
+time_col: Timestamp
+freq_col: Pump1_Freq_Hz
+flow_col: Pump1_Flow_m3h
+head_col: Pump1_Head_m
+nominal_freq: 50.0
+freq_tol: 0.5
+min_points_per_cycle: 30
+min_points_per_window: 60
+alpha_pump: 0.0001
+delta_min_pump: 0.01
+alpha_sys: 0.0001
+delta_min_sys: 0.05
+window_size: 6
+window_stride: 2
+holm_bonferroni: True
+use_wls: True
+make_plots: True
+do_sweep: True
+sweep_alphas: (0.0001, 0.0005, 0.001, 0.002, 0.005, 0.01, 0.02)
+sweep_deltas_p: (0.0, 0.01, 0.02, 0.03, 0.05, 0.08, 0.1)
+sweep_deltas_s: (0.0, 0.01, 0.02, 0.03, 0.05, 0.08, 0.1)
+seed: 42
+
+=== Sweep (best) ===
+a_p: 0.0001
+d_p: 0.01
+a_s: 0.0001
+d_s: 0.05
+ba: 0.9362745098039215
+f1m: 0.8249847014599179
+
+=== Metrics ===
+balanced_accuracy: 0.9362745098039215
+macro_f1: 0.8249847014599179
+
+=== Classification Report (known only) ===
+              precision    recall  f1-score   support
+
+      Normal       1.00      0.81      0.89        68
+  Pump Fault       1.00      1.00      1.00         4
+System Fault       0.41      1.00      0.58         9
+
+    accuracy                           0.84        81
+   macro avg       0.80      0.94      0.82        81
+weighted avg       0.93      0.84      0.86        81

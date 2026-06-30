@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+.venv/
+venv/
+
+# data/results, adjust if needed
+data/
+results/
+*.csv
+*.xlsx
+*.mat
+*.pkl
+*.npy
+*.npz
